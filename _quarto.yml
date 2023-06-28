@@ -1,0 +1,13 @@
+project:
+  type: book
+
+book:
+  title: "r-cubed-ise"
+  author: "Luke W. Johnston"
+  chapters:
+    - index.qmd
+
+format:
+  html:
+    theme: cosmo
+
