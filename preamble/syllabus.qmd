@@ -2,9 +2,61 @@
 
 {{< include ../includes/_wip.qmd >}}
 
-Objectives:
+```{r force-downlit}
+#| include: false
+library(downlit)
+```
 
--   Item 1
+Our overall **learning outcome** is that by the end of the course:
+
+> Learners will be able to describe the core details of a server
+> environment, how it differs from working locally. They will explain
+> the special considerations needed for conducting reproducible research
+> in this type of environment. Using that knowledge, they will be able
+> to identify storage formats and computational approaches that
+> efficiently and optimally use the server resources for working with
+> large data. Learners will apply these techniques and practices by
+> using R.
+
+Our **specific** learning objectives are:
+
+-   List common types of servers available for working with data and
+    their strengths and weaknesses (such as their technical
+    specifications), and recognize which type they are working on with
+    their own projects (and in the course).
+-   Describe common types of data storage formats, how they can affect
+    data analysis, and which types are better suited for server
+    settings.
+-   Apply pipeline management tools and then identify and select
+    settings that optimize use of server resources to minimize computing
+    time and resource usage.
+-   Recognize and identify potential issues for privacy and security,
+    and use specific strategies to minimize risk.
+-   List specific strategies for effectively working with and
+    prototyping on larger data to minimize computing time and resource
+    use.
+-   Continue to build core reproducible research practices by using
+    version control and reproducible documents.
+
+Maybe?
+
+-   Understanding how RStudio can be setup on server environment
+    (different from working on RStudio on a desktop)
+-   When to do local work vs on the server (server's cost money and
+    resources)
+
+We will not cover:
+
+-   Any?
+
+Because learning and coding is ultimately not *just* a solo activity,
+during this course we also aim to provide opportunities to chat with
+fellow participants, learn about their work and how they do analyses,
+and to build networks of support and collaboration.
+
+The specific software and technologies we will cover in this course are
+R, RStudio, Git (and maybe GitHub), ..., while the specific R packages
+are ...
 
 ## Is this course for you? {#sec-is-it-for-you}
 
