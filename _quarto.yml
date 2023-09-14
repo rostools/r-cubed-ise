@@ -1,13 +1,42 @@
 project:
-  type: book
+  type: r3-theme
+  # pre-render: bash _build-slides.sh
+  # resources:
+  #   - slides/*.html
 
 book:
-  title: "r-cubed-ise"
-  author: "Luke W. Johnston"
+  title: "Reproducible Research in R: ISE"
+  subtitle: "A course"
+  author: Luke W. Johnston
+  date: last-modified
+  repo-url: https://github.com/rostools/r-cubed-ise
   chapters:
     - index.qmd
+    - part: "Preamble"
+      chapters:
+      - preamble/syllabus.qmd
+      - preamble/schedule.qmd
+      - preamble/pre-course.qmd
+    - part: "Sessions"
+      chapters:
+      - sessions/introduction.qmd
+      - sessions/lesson.qmd
+      - sessions/what-next.qmd
+  appendices:
+    - appendix/social.qmd
+    - appendix/for-instructors.qmd
+    - appendix/references.qmd
+  page-footer:
+    center:
+      - text: "License: CC BY 4.0 {{< fa brands creative-commons >}} {{< fa brands creative-commons-by >}}"
+        href: LICENSE.html
+      - text: "Code of Conduct"
+        href: "https://guides.rostools.org/conduct.html"
 
 format:
-  html:
-    theme: cosmo
+  r3-theme-html: default
 
+editor:
+  markdown:
+    wrap: 72
+    canonical: true
