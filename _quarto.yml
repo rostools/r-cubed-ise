@@ -6,10 +6,11 @@ project:
 
 book:
   title: "Reproducible Research in R: ISE"
-  subtitle: "A course"
+  subtitle: "An introductory course on using R for reproducible research in server environments"
   author: Luke W. Johnston
   date: last-modified
   repo-url: https://github.com/rostools/r-cubed-ise
+  site-url: https://r-cubed-ise.rostools.org
   chapters:
     - index.qmd
     - part: "Preamble"
@@ -20,11 +21,17 @@ book:
     - part: "Sessions"
       chapters:
       - sessions/introduction.qmd
-      - sessions/lesson.qmd
+      - sessions/server-basics.qmd
+      - sessions/databases.qmd
+      - sessions/prototyping.qmd
+      - sessions/optimizing.qmd
+      - sessions/mixed.qmd
       - sessions/what-next.qmd
   appendices:
     - appendix/social.qmd
+    - appendix/project.qmd
     - appendix/for-instructors.qmd
+    - LICENSE.md
     - appendix/references.qmd
   page-footer:
     center:
