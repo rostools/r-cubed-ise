@@ -1,0 +1,56 @@
+# Group project assignment {#sec-assignment}
+
+To maximize how much you learn and how much you will retain, you as a
+group will take what you learn in the course and apply it to create a
+reproducible project. This project ...
+
+During the last session of the course you will work on this assignment.
+In the last \~20 minutes of this session, the lead instructor will ...
+and re-generate your report to check that it is reproducible.
+
+## Specific tasks
+
+You will be collaborating as a team using ... to manage your group
+assignment. We will set up the project with ... for you so you can
+quickly start collaborating together on the project.
+
+Your specific tasks are:
+
+Sequence of steps for project:
+
+-   Starting point:
+    -   Learning how to identify what file storage format (e.g. csv or
+        SAS dataset) there are and knowing how convert those files into
+        more efficient formats (like Parquet or a SQL database)
+    -   Give them a few server environment types, and the same data but
+        with different starting formats. And then they figure out the
+        next steps based on that information
+    -   Multiple data is big enough to prevent doing it normal way (1 Gb
+        or larger?)
+-   Explaining why the original data format might not be ideal and then
+    converting the data into more efficient format
+-   Identify what the desired sample is for the dataset, only select and
+    filter data they need for analysis
+-   Split the data into smaller chunk to prototype code (running code on
+    all the data later)
+-   Run basic analysis (descriptive statistics)... Not modeling
+-   Implement some code to run with parallel processing
+-   Identifying which format data or items can be downloaded, and
+    converting that to that format
+
+Assumptions:
+
+-   Assume they have taken the intermediate course (need to know
+    functionals and function-based workflows), and either have read or
+    taken the advanced course or are familiar enough with targets
+
+## Quick "checklist" for a good project
+
+## Expectations for the project
+
+What we expect you to do for the group project:
+
+What we don't expect:
+
+Essentially, the group project is a way to reinforce what you learned
+during the course, but in a more relaxed and collaborative setting.
