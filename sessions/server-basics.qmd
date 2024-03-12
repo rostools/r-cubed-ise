@@ -1,0 +1,46 @@
+# Structure and basics of servers
+
+{{< include ../includes/_wip.qmd >}}
+
+```{r setup}
+#| include: false
+```
+
+<!-- TODO: Add an introduction here -->
+
+**Session objectives**:
+
+Introduction presentation, overview.
+
+General server environment types, what does it look like, why use it,
+how to identify strengths/weaknesses, within RStudio in the server.
+
+Filesystem? Coding? Basic server etiquette?
+
+Where to save things (some servers delete everything after logout, where
+are things saved?)
+
+Small differences with using Git? (e.g. cheatsheet/steps to take when
+starting up and using a server for the first time)
+
+## TODO: Section
+
+::: callout-note
+## Reading task: \~4 minutes
+
+TODO: Reading text
+:::
+
+## Exercise: TODO: Add title
+
+> Time: \## minutes.
+
+```{r solution-LABEL}
+#| eval: false
+#| code-fold: true
+#| code-summary: "**Click for the solution**. Only click if you are struggling or are out of time."
+```
+
+## Summary
+
+-   TODO: List of summary items

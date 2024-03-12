@@ -1,4 +1,4 @@
-# TODO: Lesson title here
+# Optimizing code for efficiency
 
 {{< include ../includes/_wip.qmd >}}
 
@@ -9,6 +9,10 @@
 <!-- TODO: Add an introduction here -->
 
 **Session objectives**:
+
+Basic wrangling and analysis approaches
+
+Parallel processing (with targets and with furrr/futures)
 
 ## TODO: Section
 
