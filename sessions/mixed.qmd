@@ -1,0 +1,42 @@
+# Challenges and considerations specific to servers
+
+<!-- TODO: Better title? -->
+
+{{< include ../includes/_wip.qmd >}}
+
+```{r setup}
+#| include: false
+```
+
+<!-- TODO: Add an introduction here -->
+
+**Session objectives**:
+
+Converting (in-memory) object into form usable by stats packages, with
+basic example of linear regression or something
+
+How to save/output stuff for download in legally-compliant way
+
+What **not** to do in a server setting
+
+## TODO: Section
+
+::: callout-note
+## Reading task: \~4 minutes
+
+TODO: Reading text
+:::
+
+## Exercise: TODO: Add title
+
+> Time: \## minutes.
+
+```{r solution-LABEL}
+#| eval: false
+#| code-fold: true
+#| code-summary: "**Click for the solution**. Only click if you are struggling or are out of time."
+```
+
+## Summary
+
+-   TODO: List of summary items
