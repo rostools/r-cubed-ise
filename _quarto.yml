@@ -8,8 +8,10 @@ book:
   title: "Reproducible Research in R: ISE"
   subtitle: "An introductory course on using R for reproducible research in server environments"
   author:
-    - Luke W. Johnston
-    - Daniel Ibsen
+   - Luke W. Johnston
+   - Daniel Ibsen
+   - Kris Beicher
+   - Omar Silverman
   date: last-modified
   repo-url: https://github.com/rostools/r-cubed-ise
   site-url: https://r-cubed-ise.rostools.org
