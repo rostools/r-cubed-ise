@@ -2,3 +2,16 @@ Package: rcubedise
 Type: Website
 Version: 0.0
 License: MIT + file LICENSE
+Imports: 
+    desc,
+    downlit,
+    dplyr,
+    here,
+    htmltools,
+    knitr,
+    purrr,
+    r3admin (>= 0.0.1),
+    readr,
+    rmarkdown
+Remotes:  
+    rostools/r3admin
