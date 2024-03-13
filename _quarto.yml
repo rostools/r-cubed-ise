@@ -30,7 +30,7 @@ book:
       - sessions/databases.qmd
       - sessions/prototyping.qmd
       - sessions/optimizing.qmd
-      - sessions/mixed.qmd
+      - sessions/troubleshooting.qmd
       - sessions/what-next.qmd
   appendices:
     - appendix/social.qmd
