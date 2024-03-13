@@ -1,4 +1,4 @@
-# Challenges and considerations specific to servers
+# Troubleshooting and server-specific challenges
 
 <!-- TODO: Better title? -->
 
