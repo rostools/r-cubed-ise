@@ -9,6 +9,7 @@ book:
   subtitle: "An introductory course on using R for reproducible research in server environments"
   author:
    - Luke W. Johnston
+   - Alisa D. Kjaergaard
    - Kris Beicher
    - Omar Silverman
   date: last-modified
