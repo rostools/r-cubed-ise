@@ -7,6 +7,8 @@
 library(downlit)
 ```
 
+## Learning outcome and objectives
+
 Our overall **learning outcome** is that by the end of the course:
 
 > Learners will be able to describe the core details of a server
@@ -55,8 +57,11 @@ fellow participants, learn about their work and how they do analyses,
 and to build networks of support and collaboration.
 
 The specific software and technologies we will cover in this course are
-R, RStudio, Git (and maybe GitHub), ..., while the specific R packages
-are ...
+R, RStudio, Git (and maybe GitHub), Parquet, and SQL while the specific
+R packages are `{purrr}`, `{furrr}`, `{futures}`, `{targets}`,
+`{duckdb}`, and `{dplyr}`. The sessions we will cover are:
+
+<!-- TODO: Brief description of each sessions? -->
 
 ## Is this course for you? {#sec-is-it-for-you}
 
