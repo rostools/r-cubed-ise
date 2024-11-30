@@ -69,7 +69,12 @@ To help manage expectations and develop the material for this course, we
 make a few assumptions about *who you are* as a participant in the
 course:
 
--   Assumptions
+Assumptions:
+
+-   This course builds off of the content found within the intermediate
+    course (specifically, using functionals and function-based
+    workflows) and the advanced course (specifically, using `{targets}`
+    to build pipelines).
 
 While we have these assumptions to help focus the content of the course,
 if you have an interest in learning R but don't fit any of the above
