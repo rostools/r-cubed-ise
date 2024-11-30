@@ -1,3 +1,8 @@
+---
+execute:
+    eval: false
+---
+
 # Introduction to course {#sec-introduction}
 
 {{< include ../includes/_wip.qmd >}}
@@ -21,4 +26,213 @@ the keyboard.
 
 ## The Big Picture
 
-TODO: Add text highlighting the bigger picture of why we teach this.
+::: callout-note
+## Reading task: \~15 minutes
+
+This section gives a big picture overview of what we hope you learn, why
+we teach the things we teach, and how it might look like at the end.
+Expanding on the learning outcome described in @sec-syllabus, our big
+picture aim is:
+
+> To setup a data analysis project in a server setting along with a set
+> of practices and principles that will form the practical foundation to
+> doing effective and reproducible research using R in the server.
+>
+> We want a data analysis project that:
+>
+> 1.  Makes it clear and explicit the exact sequence of steps involved
+>     in the analysis of data, both to provide a "recipe" that others
+>     (and future you) can review as well as to provide a framework to
+>     structure code that optimizes the use of server resources.
+> 2.  Is best adapted to the specific settings of the server, for
+>     instance, making use of multiple cores to run code in parallel and
+>     to minimize the use of memory and time spent running the analyses.
+> 3.  Converts data into more efficient formats, such as databases, to
+>     conserve storage space and speed up computations and analyses.
+> 4.  Adheres to the principles of transparency and reproducibility
+>     through the use of specific workflows, such as using version
+>     control.
+
+What this big picture means in the context of R and RStudio is that we:
+
+-   Follow a "project-oriented" workflow (see the [introductory course
+    session on
+    projects](https://r-cubed-intro.rostools.org/sessions/project-management)).
+-   Follow some standard conventions in R, like having a `DESCRIPTION`
+    file, using `R/` and `data/` folders.
+-   Follow a "function-oriented" workflow (see the [intermediate course
+    session on function-based
+    workflows](https://r-cubed-intermediate.rostools.org/sessions/functions)).
+-   Follow a "pipeline-oriented" workflow (see the [intermediate course
+    session on pipeline-based
+    workflows](https://r-cubed-advanced.rostools.org/sessions/pipelines)).
+
+These workflows combine to make your work and coding more efficient and
+more reproducible.
+
+## Project-oriented workflow
+
+This workflow makes it easier to manage and navigate through your files
+and code. It also makes it easier to share your work with others and to
+keep files and code related to a project together and reproducible.
+
+::: columns
+::: column
+### Using Projects
+
+RStudio has a built-in feature called "Projects" that helps you organize
+files in a structured way. These "R Projects" are essentially a file
+called `*.Rproj` that tells RStudio how to run code and sets R's working
+directory to be the folder that the `*.Rproj` file is in.
+
+Then, writing R code, you would refer to other R scripts or data files
+using the `{here}` package. So, if your `*.Rproj` file is in the folder
+`/user/name/Documents/diabetes-complications/`, and you wanted to refer
+to a file in the `data/` folder, you would write:
+
+```{r}
+here::here("data/data.csv")
+```
+:::
+
+::: column
+### Not using projects
+
+If you are not using RStudio R Projects, you probably have code that
+includes path like this:
+
+```{r}
+setwd("/user/name/Documents/diabetes-complications/")
+# or
+read.csv("/user/name/Documents/diabetes-complications/data/data.csv")
+```
+
+Using practices like this usually makes your analysis no longer
+reproducible.
+:::
+:::
+
+## Function-oriented workflow
+
+A function-oriented workflow is a way of structuring your code where
+pieces of code are converted into functions rather than keep them as a
+series of steps. Advantages of this workflow is that the code describes
+in more detail what is being done to the data, allows your code to be
+easily reused elsewhere, and combines well with other workflows.
+
+::: columns
+::: column
+### With functions
+
+A very simple example of this workflow might be to create a function
+specifically to calculate a new variable, like body mass index (BMI) for
+two datasets:
+
+```{r}
+calculate_bmi <- function(data) {
+  data |>
+    mutate(bmi = weight / height^2)
+}
+dataset1 |>
+  calculate_bmi()
+dataset2 |>
+  calculate_bmi()
+```
+:::
+
+::: column
+### Without functions
+
+Not making functions would be to write code mostly in sequence of steps
+and to copy and paste the same code if it is used elsewhere:
+
+```{r}
+dataset1 |>
+  mutate(bmi = weight / height^2)
+dataset2 |>
+  mutate(bmi = weight / height^2)
+```
+:::
+:::
+
+## Pipeline-oriented workflow
+
+A formal pipeline is a set of instructions a program uses to run a
+specific series of actions to produce specific outputs. In R, this is
+often done using the `{targets}` package. The `{targets}` package also
+uses a function-oriented workflow. A major advantage of this workflow is
+that you don't need to remember the order of steps done in the analysis,
+nor do you need to re-run the entire analysis if you only need to update
+one part of the analysis.
+
+::: columns
+::: column
+### With targets pipeline
+
+A simple example of this workflow using the `calculate_bmi()` function
+would have the function in a `R/functions.R` file:
+
+```{r}
+#| filename: R/functions.R
+calculate_bmi <- function(data) {
+  data |>
+    mutate(bmi = weight / height^2)
+}
+```
+
+And to build the pipeline in the default `_targets.R` file:
+
+```{r}
+#| filename: _targets.R
+list(
+  tar_target(dataset1_with_bmi, {
+    dataset1 |>
+      calculate_bmi()
+  }),
+  tar_target(dataset2_with_bmi, {
+    dataset2 |>
+      calculate_bmi()
+  })
+)
+```
+:::
+
+::: column
+### Without a formal pipeline
+
+Without this pipeline setup, you would likely have a "main" script that
+runs the code in sequence:
+
+```{r}
+#| filename: main.R
+source("R/process_data.R")
+```
+
+And the `R/process_data.R` file would contain the code:
+
+```{r}
+#| filename: R/process_data.R
+dataset1 |>
+  mutate(bmi = weight / height^2)
+dataset2 |>
+  mutate(bmi = weight / height^2)
+```
+:::
+:::
+
+## A bit of work upfront saves time later on
+
+Many of these "project setup" tasks can take a while to set up, can
+often be very difficult and confusing. This is before you've even gotten
+to the analysis phase of your work. A good analogy for this first step
+is when skyscrapers are built. Watching construction on these projects
+makes it feel like it takes forever for them to finally start going up
+and adding floors. But once they start adding floors, it goes up so
+fast! That's because a lot of the main work is in building up the
+foundation of the building, so that it is strong and stable. This is the
+same with analysis projects, the first phase feels like nothing is
+"moving" but you are building the foundation to everything that comes
+after.
+
+<!-- TODO: Add diagram here -->
+:::
