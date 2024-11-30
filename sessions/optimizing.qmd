@@ -8,11 +8,31 @@
 
 <!-- TODO: Add an introduction here -->
 
-**Session objectives**:
+## Learning objectives
 
-Basic wrangling and analysis approaches
+The overall learning outcome for this session is to:
 
-Parallel processing (with targets and with furrr/futures)
+1.  Describe some coding strategies to optimize code to reduce computing
+    time and resource usage, identify situations to make use of them,
+    and apply them within an R project.
+
+Specific objectives are to:
+
+1.  Explain why a functional programming approach, by using functions
+    and functionals (like functions from `{purrr}`), is one of the more
+    efficient methods to working with large data.
+
+2.  Explain what parallel processing is and when it should be used to
+    speed up code rather than slow it down.
+
+3.  Implement parallel processing for smaller chunks of code by using
+    `{furrr}` and `{futures}`.
+
+4.  Incorporate parallel processing within a `{targets}` pipeline by
+    using `{crew}`, functionals, and functions.
+
+5.  Identify how the split-apply-combine approach can be applied to a
+    server situation that will improve speed and reduce resources.
 
 ## TODO: Section
 
